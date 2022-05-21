@@ -1,38 +1,301 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.heading {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    z-index: +1;
+    background-color: rgb(37, 66, 112);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.heading h1 {
+    font-size: 6vw;
+    text-align: center;
+    font-weight: normal;
+    color: white;
+    box-shadow: 10px 0px 10px black;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.movies {
+    background-color: rgb(37, 66, 112);
+    width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+footer {
+    height: 10vh;
+    background-color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.movies h1 {
+    padding-top: 10vw;
+    text-align: center;
+    color: white;
+    font-weight: normal;
+    padding-bottom: 7px;
+}
+
+.movie .Card {
+    height: 350px;
+    width: 230px;
+    background-color: rgb(53, 51, 51);
+    border-radius: 10px;
+    position: relative;
+    margin-left: 20px;
+    display: inline-block;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.movie .Card:hover {
+    background-color: grey;
+}
+
+.movie {
+    position: relative;
+    justify-content: center;
+    background-color: rgb(37, 66, 112);
+    /* overflow-y: scroll; */
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 200px;
+    padding-right: 200px;
+    margin-bottom: 79px;
+}
+
+.movie .Card p {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: normal;
+    color: white;
+    padding: 1px;
+    padding-left: 2px;
+    padding-right: 2px;
+    background-color: red;
+    right: 0px;
+    transform: translate(7px, -7px);
+}
+
+.movie .Card h3 {
+    text-align: center;
+    color: white;
+    font-weight: normal;
+    margin-bottom: 7px;
+    margin-top: 7px;
+}
+
+footer .foot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+h6,
+h1 {
+    text-align: center;
+    color: white;
+}
+
+.movie .Card img {
+    width: 100%;
+    height: 80%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.movie .Card .date {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 5px;
+}
+
+.movie .Card .date h1 {
+    font-size: 15px;
+    font-weight: normal;
+    color: white;
+}
+
+footer .foot h3 {
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.AlertBox {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 90vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    background-color: greenyellow;
+    overflow: visible;
+    transform: translate(0%, -170%);
+}
+
+.Card .date h1 {
+    color: white;
+}
+
+.onclick {
+    position: fixed;
+    top: 10%;
+    height: 80%;
+    width: 90%;
+    left: 5%;
+    background-color: rgb(37, 66, 112);
+    z-index: 1;
+    display: flex;
+}
+
+.onclick .left {
+    height: 100%;
+    width: 40%;
+    position: relative;
+    background-color: rgb(37, 66, 112);
+}
+
+.onclick .Right {
+    position: relative;
+    background-color: rgb(37, 66, 112);
+    width: 60%;
+    height: 100%;
+}
+
+.onclick .left .image {
+    padding: 2%;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.onclick .Right h1 {
+    margin-top: 2%;
+}
+
+.onclick .Right .Box {
+    height: 45%;
+    width: 90%;
+    position: relative;
+    margin-top: 2%;
+    background-color: rgb(37, 66, 112);
+    box-shadow: 3px -3px 7px black;
+    box-shadow: 3px 3px 7px black;
+    border-radius: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    box-sizing: border-box;
+}
+
+.onclick .characters {
+    background-color: rgb(37, 66, 112);
+    width: 98%;
+    height: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 2%;
+    white-space: nowrap;
+    overflow-x: auto;
+    /* overflow-y: hidden; */
+}
+
+.onclick .characters::-webkit-scrollbar {
+    display: none;
+}
+
+.onclick .characters .name {
+    border-radius: 5px;
+    background-color: rgb(37, 66, 112);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+    margin-left: 8px;
+    font-size: 20px;
+    color: white;
+}
+
+.onclick .characters .imagename {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    box-sizing: border-box;
+    height: 120px;
+    width: 150px;
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.Right button {
+    width: 98%;
+    margin-top: 15px;
+    margin-left: 1%;
+    margin-right: 1%;
+    height: 35px;
+    font-size: 16px;
+    background-color: rgb(249, 9, 133);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: normal;
+}
+
+.page {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@media (max-width:700px) {
+    footer {
+        padding: 0;
+        width: 100%;
+    }
+    .movie {
+        padding: 0;
+        width: 100%;
+        margin-bottom: 68px;
+        overflow: hidden;
+    }
+    .movie .Card {
+        margin: 0;
+        margin-bottom: 10px;
+        margin-left: 10px;
+    }
+    .onclick {
+        flex-direction: column;
+        overflow-y: scroll;
+        justify-content: center;
+        align-items: center;
+        background-color: purple;
+    }
 }
